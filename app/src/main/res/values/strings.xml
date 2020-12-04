@@ -6,4 +6,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <!--Place Holder Text-->
     <string name="buy">Buy Now</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
 </resources>
