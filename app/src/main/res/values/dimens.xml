@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner">8dp</dimen>
+    <dimen name="bigpadding">20dp</dimen>
+    <dimen name="mediumpadding">10dp</dimen>
+    <dimen name="smallpadding">5dp</dimen>
+    <dimen name="etpadding">10dp</dimen>
+    <dimen name="circlediameter">60dp</dimen>
+    <dimen name="border">2dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="ivsize">32dp</dimen>
+    <dimen name="fontsize1">18sp</dimen>
+</resources>
