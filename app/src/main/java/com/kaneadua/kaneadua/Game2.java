@@ -1,15 +1,17 @@
 package com.kaneadua.kaneadua;
 
+import java.util.ArrayList;
+
 public class Game2 {
     String imageurl;
     String title;
-    String[] tags;
+    ArrayList<String> tags;
     String description;
 
     public Game2() {
     }
 
-    public Game2(String imageurl, String title, String[] tags, String description) {
+    public Game2(String imageurl, String title, ArrayList<String> tags, String description) {
         this.imageurl = imageurl;
         this.title = title;
         this.tags = tags;
@@ -32,12 +34,24 @@ public class Game2 {
         this.title = title;
     }
 
-    public String[] getTags() {
+    public ArrayList<String> getTags() {
         return tags;
     }
 
-    public void setTags(String[] tags) {
+    public void setTags(ArrayList<String> tags) {
         this.tags = tags;
+    }
+
+    public void addTag(String tag){
+        this.tags.add(tag);
+    }
+
+    public String getAllTags(){
+        StringBuilder allTags = new StringBuilder();
+        for(String t : tags){
+            allTags.append(t);
+        }
+        return allTags.toString();
     }
 
     public String getDescription() {
