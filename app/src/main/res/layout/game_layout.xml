@@ -18,7 +18,7 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:background="@color/darkgray"
-            android:id="@+id/img_game"/>
+            android:id="@+id/ivgame"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,6 +27,7 @@
             android:gravity="start"
             android:text="Game Title"
             android:layout_margin="1dp"
+            android:id="@+id/tvTitle"
             />
         <TextView
             android:layout_width="match_parent"
@@ -34,13 +35,15 @@
             android:text="First Person Shooter"
             android:textSize="12sp"
             android:textColor="@color/red"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp"
+            android:id="@+id/tvTags"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/fontsize2"
             android:text="A gruesome first person shooter whose description"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp"
+            android:id="@+id/tvDescription"/>
 
     </LinearLayout>
 

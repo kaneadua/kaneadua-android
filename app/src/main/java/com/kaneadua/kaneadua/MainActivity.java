@@ -2,12 +2,16 @@ package com.kaneadua.kaneadua;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,9 +20,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        List<Game2> games = new ArrayList<>();
+        games.add(new Game2());
+        games.add(new Game2());
+        games.add(new Game2());
+        games.add(new Game2());
+        games.add(new Game2());
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        Games2Adapter
+
+
+
     }
 
     @Override
@@ -33,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.layout){
             Intent intent = new Intent(this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.loginpage){
+            Intent intent = new Intent(this, LoginActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.registerpage){
+            Intent intent = new Intent(this, RegisterActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;
         }
