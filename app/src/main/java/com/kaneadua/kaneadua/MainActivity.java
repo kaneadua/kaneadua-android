@@ -2,6 +2,7 @@ package com.kaneadua.kaneadua;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -21,14 +22,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         List<Game2> games = new ArrayList<>();
-        games.add(new Game2());
-        games.add(new Game2());
-        games.add(new Game2());
-        games.add(new Game2());
-        games.add(new Game2());
+        // add random games here
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        Games2Adapter
+        Games2Adapter games2Adapter = new Games2Adapter(this, games);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setAdapter(games2Adapter);
+
 
 
 
