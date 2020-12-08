@@ -1,0 +1,47 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_game"
+    android:layout_height="240dp"
+    android:layout_width="190dp"
+    android:layout_margin="@dimen/margin"
+    app:cardCornerRadius="@dimen/corner"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:focusable="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:background="@color/darkgray"
+            android:id="@+id/img_game"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textSize="@dimen/fontsize1"
+            android:gravity="start"
+            android:text="Game Title"
+            android:layout_margin="1dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Person Shooter"
+            android:textSize="12sp"
+            android:textColor="@color/red"
+            android:layout_margin="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontsize2"
+            android:text="A gruesome first person shooter whose description"
+            android:layout_margin="1dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

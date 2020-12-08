@@ -8,6 +8,9 @@
     <dimen name="circlediameter">60dp</dimen>
     <dimen name="border">2dp</dimen>
     <dimen name="padding">10dp</dimen>
+    <dimen name="margin">5dp</dimen>
     <dimen name="ivsize">32dp</dimen>
-    <dimen name="fontsize1">18sp</dimen>
+    <dimen name="fontsize1">16sp</dimen>
+    <dimen name="fontsize2">13sp</dimen>
+    <dimen name="fontsize3">8sp</dimen>
 </resources>
