@@ -37,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
         Games2Adapter games2Adapter = new Games2Adapter(this, games);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(games2Adapter);
-
-
-
-
     }
 
     @Override
