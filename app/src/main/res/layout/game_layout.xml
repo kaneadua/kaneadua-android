@@ -1,7 +1,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview_game"
-    android:layout_height="240dp"
+    android:layout_height="250dp"
     android:layout_width="190dp"
     android:layout_margin="@dimen/margin"
     app:cardCornerRadius="@dimen/corner"
@@ -9,18 +9,24 @@
     android:clickable="true"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:focusable="true">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/smallpadding">
         <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:background="@color/darkgray"
             android:id="@+id/ivgame"/>
         <TextView
-            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/ivgame"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/darkgray"
             android:textSize="@dimen/fontsize1"
@@ -30,7 +36,20 @@
             android:id="@+id/tvTitle"
             />
         <TextView
-            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/ivgame"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free"
+            android:padding="@dimen/smallpadding"
+            android:background="@color/lightgray"
+            android:textSize="@dimen/fontsize2"
+            android:id="@+id/tvPrice"
+            />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="First Person Shooter"
             android:textSize="12sp"
@@ -38,6 +57,8 @@
             android:layout_margin="1dp"
             android:id="@+id/tvTags"/>
         <TextView
+            app:layout_constraintTop_toBottomOf="@id/tvTags"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/fontsize2"
@@ -45,6 +66,6 @@
             android:layout_margin="1dp"
             android:id="@+id/tvDescription"/>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

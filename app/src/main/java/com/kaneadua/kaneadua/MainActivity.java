@@ -21,20 +21,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Game2> games = new ArrayList<>();
+        List<Game> games = new ArrayList<>();
         // add random games here
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
-        games.add(new Game2("https://picsum.photos/200","Game 1","first demo","a real life demo game2"));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 2.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 0.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 2.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 5.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 2.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 15.0));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 1.99));
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 2) );
+        games.add(new Game("https://picsum.photos/200","Game 1","first demo","a real life demo Game", 0));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        Games2Adapter games2Adapter = new Games2Adapter(this, games);
+        GamesAdapter games2Adapter = new GamesAdapter(this, games);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(games2Adapter);
     }

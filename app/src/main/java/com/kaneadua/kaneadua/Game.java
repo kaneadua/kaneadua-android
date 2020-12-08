@@ -4,21 +4,29 @@ import java.util.Random;
 
 public class Game {
    int id;
-   String name;
+   String title;
    String publisher;
    String platform;
    String description;
    String downloadUrl;
    String imageUrl;
    double price;
-   String[] tags;
+   String tags;
 
     public Game() {
     }
 
-    public Game(int id, String name, String publisher, String platform, String description, String downloadUrl, String imageUrl, double price, String[] tags) {
+    public Game(String imageurl, String title, String tags, String description, double price) {
+        this.imageUrl = imageurl;
+        this.title = title;
+        this.tags = tags;
+        this.description = description;
+        this.price = price;
+    }
+
+    public Game(int id, String title, String publisher, String platform, String description, String downloadUrl, String imageUrl, double price, String tags) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.publisher = publisher;
         this.platform = platform;
         this.description = description;
@@ -36,12 +44,12 @@ public class Game {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getPublisher() {
@@ -92,11 +100,11 @@ public class Game {
         this.price = price;
     }
 
-    public String[] getTags() {
+    public String getTags() {
         return tags;
     }
 
-    public void setTags(String[] tags) {
+    public void setTags(String tags) {
         this.tags = tags;
     }
 }
